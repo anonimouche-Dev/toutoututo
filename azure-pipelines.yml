@@ -1,0 +1,41 @@
+trigger:
+- main  # Déclenche la build sur les changements dans la branche principale
+
+pool:
+  vmImage: 'macos-latest'  # Utiliser un agent macOS pour la build MAUI, car il est nécessaire pour les builds Android et iOS
+
+variables:
+  buildConfiguration: 'Release'
+  androidSdkDirectory: '/Users/runner/Library/Android/sdk'  # Répertoire du SDK Android
+
+jobs:
+- job: Build_Android_APK
+  displayName: 'Build Android APK'
+  steps:
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '7.x.x'  # Spécifiez la version du .NET SDK que vous utilisez, assurez-vous qu'elle est compatible avec MAUI
+
+  - script: |
+      # Installer les outils et les plateformes nécessaires pour le SDK Android
+      sdkmanager --list
+      sdkmanager "platforms;android-33" "build-tools;33.0.0"
+    displayName: 'Install Android SDK components'
+
+  - script: |
+      # Construire l'application .NET MAUI
+      dotnet build "YourMauiBlazorProject.csproj" -f net7.0-android -c $(buildConfiguration)
+    displayName: 'Build the Android APK'
+
+  - task: CopyFiles@2
+    inputs:
+      contents: '**/*.apk'
+      targetFolder: '$(Build.ArtifactStagingDirectory)'
+    displayName: 'Copy APK to staging directory'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathToPublish: '$(Build.ArtifactStagingDirectory)'
+      artifactName: 'apk'
+    displayName: 'Publish APK as Build Artifact'
