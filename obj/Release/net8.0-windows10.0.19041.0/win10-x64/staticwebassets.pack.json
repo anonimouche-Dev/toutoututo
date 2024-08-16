@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\git\\toutoututo\\toutoututo\\obj\\Release\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\toutoututo.styles.css",
+      "PackagePath": "staticwebassets\\toutoututo.styles.css"
+    },
+    {
+      "Id": "C:\\git\\toutoututo\\toutoututo\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\git\\toutoututo\\toutoututo\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\git\\toutoututo\\toutoututo\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\git\\toutoututo\\toutoututo\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\git\\toutoututo\\toutoututo\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Release\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.build.toutoututo.props",
+      "PackagePath": "build\\toutoututo.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.buildMultiTargeting.toutoututo.props",
+      "PackagePath": "buildMultiTargeting\\toutoututo.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.buildTransitive.toutoututo.props",
+      "PackagePath": "buildTransitive\\toutoututo.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.toutoututo.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
